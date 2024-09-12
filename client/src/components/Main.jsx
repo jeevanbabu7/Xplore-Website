@@ -1,6 +1,6 @@
 import HeroSection from './HeroSection';
 import QuoteSection from './QuoteSection';
-import ButtonSection from './ButtonSection';
+import ButtonSection from './CardSection';
 import PreEvent from './PreEventSection'
 
 const Main = () => {

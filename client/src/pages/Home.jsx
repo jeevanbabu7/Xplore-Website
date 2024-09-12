@@ -1,7 +1,8 @@
 import HeroSection from '../components/HeroSection';
 import QuoteSection from '../components/QuoteSection';
-import ButtonSection from '../components/ButtonSection';
+import ButtonSection from '../components/CardSection';
 import PreEvent from '../components/PreEventSection'
+import About from '../components/AboutSection'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <QuoteSection />
       <PreEvent />
       <ButtonSection />
+      <About />
     </div>
   );
 };
