@@ -1,11 +1,10 @@
-import { Link } from 'react-router-dom';
-
 const AboutSection = () => {
   return (
-    <section className="h-screen w-full flex flex-col justify-between items-center bg-blue-600 text-white py-16">
-      <div className="container mx-auto text-center border-2 p">
+    <section className="flex-grow h-screen w-full flex flex-col justify-center items-center bg-blue-600 text-white py-16">
+    <div className="container border-2 rounded-md p-20">
+    <div className="container mx-auto text-center ">
         <h2 className="text-4xl font-bold mb-6">About Xplore 24</h2>
-        <p className="text-lg max-w-3xl mx-auto mb-8">
+        <p className="text-xl max-w-3xl mx-auto mb-8">
           Xplore 24 is a national-level tech fest organized by the Government College of Engineering, Kannur.
           This grand event brings together the brightest minds across the country, fostering innovation and
           technical prowess. From exhilarating competitions to insightful talks and hands-on workshops,
@@ -13,43 +12,12 @@ const AboutSection = () => {
           into the future of tech!
         </p>
       </div>
-      {/* Footer Section */}
-      <footer className="bg-blue-900 text-white py-6 mt-10 w-full mb-0">
-        <div className="container mx-auto text-center">
-          <ul className="flex justify-center space-x-8 text-lg">
-            <li>
-              <Link to="/competitions" className="hover:underline">
-                Competitions
-              </Link>
-            </li>
-            <li>
-              <Link to="/workshops" className="hover:underline">
-                Workshops
-              </Link>
-            </li>
-            <li>
-              <Link to="/talk-sessions" className="hover:underline">
-                Talk Sessions
-              </Link>
-            </li>
-            <li>
-              <Link to="/faqs" className="hover:underline">
-                FAQs
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="hover:underline">
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link to="/location" className="hover:underline">
-                Location
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </footer>
+      <div className="container flex justify-center gap-20 mt-10">
+        <button className='px-10 bg-gray-200 text-black text-xl rounded-xl transition-all duration-300 ease-in-out transform hover:scale-105'>Contact Us</button>
+        <button className='px-10 py-5 bg-gray-200 text-black text-xl rounded-xl transition-all duration-300 ease-in-out transform hover:scale-105'>Location</button>
+      </div>
+    </div>
+      
       </section>
   );
 };

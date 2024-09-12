@@ -8,19 +8,14 @@ import Location from './pages/Location';
 const App = () => {
   return (
     <Router>
-        <div className='flex flex-col min-h-screen'>
-          <div className='flex-grow'>
-            {/* Define the routes */}
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/registration" element={<Registration />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/location" element={<Location />} />
-              <Route path="/faqs" element={<FAQs />} />
-            </Routes>
-          </div>
-        </div>
-        
+      <Routes>
+        {/* Define the routes */}
+        <Route path="/" element={<Home />} />
+        <Route path="/registration" element={<Registration />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/location" element={<Location />} />
+        <Route path="/faqs" element={<FAQs />} />
+      </Routes>
     </Router>
   );
 };

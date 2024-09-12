@@ -3,6 +3,7 @@ import QuoteSection from '../components/QuoteSection';
 import ButtonSection from '../components/CardSection';
 import PreEvent from '../components/PreEventSection'
 import About from '../components/AboutSection'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <PreEvent />
       <ButtonSection />
       <About />
+      <Footer />
     </div>
   );
 };
