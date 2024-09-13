@@ -1,5 +1,3 @@
-// src/pages/Registration.jsx
-
 const Registration = () => {
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
