@@ -5,9 +5,28 @@ import PreEvent from '../components/PreEventSection'
 import About from '../components/AboutSection'
 import Footer from '../components/Footer'
 import Countdown from '../components/Countdown';
+import react, { useEffect, useState} from 'react';
+import PreLoader from '../utilities/Preloader/PreLoader';
+
+
 
 const Home = () => {
-  return (
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const LazyLoading = () => {
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+    }
+
+    LazyLoading();
+
+    return () => {
+      clearTimeout(LazyLoading);
+    }
+  }, []);
+
+  return loading ? (<PreLoader />) : (
     <div className="main-container">
       <HeroSection />
       <QuoteSection />
