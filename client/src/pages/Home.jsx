@@ -10,12 +10,12 @@ import PreLoader from '../utilities/Preloader/PreLoader';
 
 
 const Home = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const LazyLoading = () => {
       setTimeout(() => {
         setLoading(false);
-      }, 2000);
+      }, 3500);
     }
 
     LazyLoading();
@@ -38,3 +38,4 @@ const Home = () => {
 };
 
 export default Home;
+
