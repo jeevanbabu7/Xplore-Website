@@ -19,7 +19,7 @@ const AboutSection = () => {
             <button className='px-10 py-8 text-white text-xl font-bold rounded-xl hover:transition-all duration-300 ease-in-out shadow-lg border-0 outline-none cursor-pointer uppercase bg-[#0e0e1a] text-[#eaeaea] bg-gradient-to-r active:scale-90 shadow-[0px_0px_150px_#1f4c65]'>Contact Us</button>
             </Link>
             <Link to='location'>
-            <button className='px-10 py-8 text-white text-xl font-bold rounded-xl hover:transition-all duration-300 ease-in-out shadow-lg border-0 outline-none cursor-pointer uppercase bg-slate-200 text-gray-900
+            <button className='px-10 py-8  text-xl font-bold rounded-xl hover:transition-all duration-300 ease-in-out shadow-lg border-0 outline-none cursor-pointer uppercase bg-slate-200 text-gray-900
     '>Location</button>
             </Link>
           </div>
