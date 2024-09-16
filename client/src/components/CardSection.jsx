@@ -5,7 +5,7 @@ import talksImage from '../assets/talks.png'
 
 const CardSection = () => {
   return (
-    <section className='h-screen w-full flex justify-center items-center  overflow-auto'>
+    <section className='w-full flex justify-center items-center pt-5 pb-10 overflow-hidden'>
       <div className='container mx-auto px-4'>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 '>
           <Card
