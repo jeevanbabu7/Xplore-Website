@@ -33,10 +33,10 @@ import {
 } from "framer-motion";
 
 
-const Card = () => {
+const Card = ({ title, imageSrc, link }) => {
   return (
-    <div className="grid w-full place-content-center  from-indigo-500 to-violet-500 px-4 py-12 text-slate-900">
-      <TiltCard />
+    <div className="grid w-full place-content-center  from-indigo-500 to-violet-500 px-4  text-slate-900">
+      <TiltCard title={title} imageSrc={imageSrc} link={link}/>
     </div>
   );
 };
@@ -44,7 +44,7 @@ const Card = () => {
 const ROTATION_RANGE = 32.5;
 const HALF_ROTATION_RANGE = 32.5 / 2;
 
-const TiltCard = () => {
+const TiltCard = ({title, imageSrc, link}) => {
   const ref = useRef(null);
 
   const x = useMotionValue(0);
@@ -97,14 +97,16 @@ const TiltCard = () => {
         className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg hover:cursor-pointer"
       >
       
-        <p
-          style={{
-            transform: "translateZ(50px)",
-          }}
-          className="text-center text-2xl font-bold"
-        >
-          Events
-        </p>
+        <a href={link} className='group'>
+           <div className='max-w-xs mx-auto bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl'>
+             <img className='w-full h-48 object-cover h-auto overflow-hidden p-7' src={imageSrc} alt={title} />
+            <div className='p-4'>
+               <h3 className='text-xl font-semibold text-center text-gray-800 group-hover:text-blue-600'>
+                 {title}
+               </h3>
+             </div>
+           </div>
+         </a>
       </div>
     </motion.div>
   );

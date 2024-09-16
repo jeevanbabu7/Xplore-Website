@@ -27,8 +27,8 @@ const Countdown = ({ targetDate }) => {
   }, [targetDate]);
 
   return (
-    <section className="h-64 flex flex-col gap-4 justify-center items-center ">
-      <p className="font-Silkscreen font-light text-3xl font-semibold">Pre-Event Registration ends in</p>
+    <section className="h-64 flex flex-col gap-4 justify-center items-center text-center">
+      <p className="font-Silkscreen font-light text-3xl font-semibold sm:text-2xl ">Pre-Event Registration ends in</p>
       <div className="flex gap-5 text-center">
           <div className="flex flex-col items-center p-2 bg-neutral rounded-box text-neutral-content">
             <span className="countdown font-mono text-5xl">{timeLeft.days}</span>

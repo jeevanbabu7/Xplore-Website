@@ -11,20 +11,20 @@ import PreLoader from '../utilities/Preloader/PreLoader';
 
 
 const Home = () => {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const LazyLoading = () => {
-      setTimeout(() => {
-        setLoading(false);
-      }, 2000);
-    }
+  const [loading, setLoading] = useState(false);
+  // useEffect(() => {
+  //   const LazyLoading = () => {
+  //     setTimeout(() => {
+  //       setLoading(false);
+  //     }, 2000);
+  //   }
 
-    LazyLoading();
+  //   LazyLoading();
 
-    return () => {
-      clearTimeout(LazyLoading);
-    }
-  }, []);
+  //   return () => {
+  //     clearTimeout(LazyLoading);
+  //   }
+  // }, []);
 
   return loading ? (<PreLoader />) : (
     <div className="main-container">
