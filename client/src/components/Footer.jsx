@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <section>
-        <footer className="bg-blue-900 text-white py-7 w-full mb-0">
+        <footer className="font-handjet  text-white py-7 w-full mb-0">
           <div className="container mx-auto text-center">
-            <ul className="flex flex-wrap justify-center space-x-8 text-lg">
+            <ul className="flex flex-wrap justify-center space-x-8 text-2xl">
               <li>
                 <Link to="/competitions" className="hover:underline">
                   Competitions

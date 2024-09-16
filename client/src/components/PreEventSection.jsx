@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import FloatingBlob from '../utilities/FloatingBlob';
 
 const PreEventRegistration = () => {
   const navigate = useNavigate();
@@ -8,7 +9,8 @@ const PreEventRegistration = () => {
   };
 
   return (
-    <section className='flex justify-center items-center min-h-screen py-10'>
+    <section className='flex justify-center items-center pt-20 mb-32 py-3'>
+      {/* <FloatingBlob /> */}
       <div className='text-center'>
         <h2 className='font-Silkscreen text-4xl font-bold mb-10'>Register !</h2>
         <button
