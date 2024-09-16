@@ -25,7 +25,7 @@ const AboutSection = () => {
         </p>
       </div>
       <div className="container flex justify-center gap-20 mt-10">
-        <button className='px-10 bg-gray-200 text-black text-xl rounded-xl transition-all duration-300 ease-in-out transform hover:scale-105' onClick={handleContact}>Contact Us</button>
+        <button className='px-10 bg-gray-200 text-black text-xl rounded-xl transition-all duration-300 ease-in-out transform hover:scale-105' onClick={handle}>Contact Us</button>
         <button className='px-10 py-5 bg-gray-200 text-black text-xl rounded-xl transition-all duration-300 ease-in-out transform hover:scale-105' onClick={handleLocation}>Location</button>
       </div>
     </div>
