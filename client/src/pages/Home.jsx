@@ -4,12 +4,14 @@ import ButtonSection from '../components/CardSection';
 import PreEvent from '../components/PreEventSection'
 import About from '../components/AboutSection'
 import Footer from '../components/Footer'
+import Countdown from '../components/Countdown';
 
 const Home = () => {
   return (
     <div className="main-container">
       <HeroSection />
       <QuoteSection />
+      <Countdown targetDate={new Date("2024-10-03") }/>
       <PreEvent />
       <ButtonSection />
       <About />

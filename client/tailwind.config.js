@@ -21,6 +21,8 @@ export default {
       },
       fontFamily: {
         handjet: ['Handjet', 'sans-serif'],
+        'Pixelify': ['"Pixelify Sans"', 'sans-serif'],
+        Silkscreen: ['"Silkscreen"', 'sans-serif'],
       },
       fontWeight: {
         'light': 100,
