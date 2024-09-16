@@ -5,26 +5,26 @@ import PreEvent from '../components/PreEventSection'
 import About from '../components/AboutSection'
 import Footer from '../components/Footer'
 import Countdown from '../components/Countdown';
-import react, { useEffect, useState} from 'react';
+import { useEffect, useState} from 'react';
 import PreLoader from '../utilities/Preloader/PreLoader';
 
 
 
 const Home = () => {
   const [loading, setLoading] = useState(false);
-  // useEffect(() => {
-  //   const LazyLoading = () => {
-  //     setTimeout(() => {
-  //       setLoading(false);
-  //     }, 2000);
-  //   }
+  useEffect(() => {
+    const LazyLoading = () => {
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+    }
 
-  //   LazyLoading();
+    LazyLoading();
 
-  //   return () => {
-  //     clearTimeout(LazyLoading);
-  //   }
-  // }, []);
+    return () => {
+      clearTimeout(LazyLoading);
+    }
+  }, []);
 
   return loading ? (<PreLoader />) : (
     <div className="main-container">

@@ -1,4 +1,3 @@
-import React from 'react';
 import './PreLoader.css'; // Importing the custom CSS for the keyframes
 
 const PreLoader = () => {

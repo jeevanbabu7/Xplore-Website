@@ -101,7 +101,7 @@ const RegistrationForm = () => {
         <h2 className="text-3xl font-semibold text-center mb-8 text-gray-800">Pre-Event Registration</h2>
         <form onSubmit={handleSubmit}>
           {/* Name */}
-          <div className="mb-6">
+          <div className="mb-5">
             <label htmlFor="name" className="block text-lg font-medium mb-2 text-gray-700">Name</label>
             <input
               type="text"
@@ -109,14 +109,14 @@ const RegistrationForm = () => {
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              className={`w-full px-4 py-3 text-lg border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500`}
+              className={`w-full px-4 py-3 text-lg border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white`}
               placeholder="Enter your name"
             />
             {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
           </div>
 
           {/* Phone */}
-          <div className="mb-6">
+          <div className="mb-5">
             <label htmlFor="phone" className="block text-lg font-medium mb-2 text-gray-700">Phone Number</label>
             <input
               type="text"
@@ -124,14 +124,14 @@ const RegistrationForm = () => {
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className={`w-full px-4 py-3 text-lg border ${errors.phone ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500`}
+              className={`w-full px-4 py-3 text-lg border ${errors.phone ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white`}
               placeholder="Enter your phone number"
             />
             {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
           </div>
 
           {/* Email */}
-          <div className="mb-6">
+          <div className="mb-5">
             <label htmlFor="email" className="block text-lg font-medium mb-2 text-gray-700">Email</label>
             <input
               type="email"
@@ -139,14 +139,14 @@ const RegistrationForm = () => {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className={`w-full px-4 py-3 text-lg border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500`}
+              className={`w-full px-4 py-3 text-lg border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white`}
               placeholder="Enter your email"
             />
             {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
           </div>
 
           {/* Password */}
-          <div className="mb-6">
+          <div className="mb-5">
             <label htmlFor="password" className="block text-lg font-medium mb-2 text-gray-700">Password</label>
             <input
               type="password"
@@ -154,14 +154,14 @@ const RegistrationForm = () => {
               name="password"
               value={formData.password}
               onChange={handleInputChange}
-              className={`w-full px-4 py-3 text-lg border ${errors.password ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500`}
+              className={`w-full px-4 py-3 text-lg border ${errors.password ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white`}
               placeholder="Enter your password"
             />
             {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
           </div>
 
           {/* Confirm Password */}
-          <div className="mb-6">
+          <div className="mb-5">
             <label htmlFor="confirmPassword" className="block text-lg font-medium mb-2 text-gray-700">Confirm Password</label>
             <input
               type="password"
@@ -169,7 +169,7 @@ const RegistrationForm = () => {
               name="confirmPassword"
               value={formData.confirmPassword}
               onChange={handleInputChange}
-              className={`w-full px-4 py-3 text-lg border ${errors.confirmPassword ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500`}
+              className={`w-full px-4 py-3 text-lg border ${errors.confirmPassword ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white`}
               placeholder="Confirm your password"
             />
             {errors.confirmPassword && <p className="text-red-500 text-sm mt-1">{errors.confirmPassword}</p>}
@@ -178,7 +178,7 @@ const RegistrationForm = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-3 text-lg rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+            className="w-full bg-blue-600 text-white py-3 text-lg rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 mt-4"
           >
             Register
           </button>
@@ -186,7 +186,7 @@ const RegistrationForm = () => {
       </div>
       <div className='mt-10'>
       <button 
-          className="mb-4 bg-gray-200 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          className="mb-4 bg-gray-200 text-white py-2 px-4 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 bg-gray-400"
           onClick={handleBackHomeClick}
         >
           Back to Homepage
