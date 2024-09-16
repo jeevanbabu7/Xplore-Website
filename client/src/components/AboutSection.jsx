@@ -1,4 +1,16 @@
+import { useNavigate } from "react-router-dom";
+
 const AboutSection = () => {
+  
+  const navigate = useNavigate();
+  const handleLocation = () => {
+    navigate('/location');
+  }
+
+  const handleContact = () => {
+    navigate('/contact')
+  }
+  
   return (
     <section className="flex-grow h-screen w-full flex flex-col justify-center items-center bg-blue-600 text-white py-16">
     <div className="container border-2 rounded-md p-20">
@@ -13,8 +25,8 @@ const AboutSection = () => {
         </p>
       </div>
       <div className="container flex justify-center gap-20 mt-10">
-        <button className='px-10 bg-gray-200 text-black text-xl rounded-xl transition-all duration-300 ease-in-out transform hover:scale-105'>Contact Us</button>
-        <button className='px-10 py-5 bg-gray-200 text-black text-xl rounded-xl transition-all duration-300 ease-in-out transform hover:scale-105'>Location</button>
+        <button className='px-10 bg-gray-200 text-black text-xl rounded-xl transition-all duration-300 ease-in-out transform hover:scale-105' onClick={handleContact}>Contact Us</button>
+        <button className='px-10 py-5 bg-gray-200 text-black text-xl rounded-xl transition-all duration-300 ease-in-out transform hover:scale-105' onClick={handleLocation}>Location</button>
       </div>
     </div>
       
