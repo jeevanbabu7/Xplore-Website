@@ -1,5 +1,3 @@
-import React from 'react';
-
 const FloatingBlob = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="300" height="250" viewBox="-25 -25 250 250" className="animation-float bg-gradient-custom rounded-full blur-2xl shadow-custom absolute top-80 -right-2/4">
