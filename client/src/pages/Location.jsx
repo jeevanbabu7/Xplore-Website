@@ -273,20 +273,18 @@ Pin : 670563`;
 const Location = () => {
   return (
     <>
-          <div className="bg-black p-10 grid grid-cols-2 gap-4 h-screen flex flex-row flex-wrap gap-4">
-            <div><Map address={''} city={"kannur"} country={"India"}/></div>
-            <div>
-              <form action="" className="bg-black mt-12 pl-5 h-60">
-                <h1 className="text-center font">Address</h1>
-                <TextRevealTW />
-
-              </form>
-
-            </div>
+      <div className="bg-black p-10 flex flex-col md:flex-row gap-4 h-screen">
+          <div className="flex-1">
+              <Map address={''} city={"kannur"} country={"India"} />
           </div>
+          <div className="flex-1">
+              <form action="" className="bg-black mt-12 pl-5 h-60">
+                  <h1 className="text-center font">Address</h1>
+                  <TextRevealTW />
+              </form>
+          </div>
+      </div>
 
-        
- 
     </>
   )
 }

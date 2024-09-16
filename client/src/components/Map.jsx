@@ -1,54 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-import icon from 'leaflet/dist/images/marker-icon.png';
-import iconShadow from 'leaflet/dist/images/marker-shadow.png';
-
-// Set default icon for Leaflet markers
-const DefaultIcon = L.icon({
-  iconUrl: icon,
-  shadowUrl: iconShadow
-});
-L.Marker.prototype.options.icon = DefaultIcon;
-
-// Component to fetch and display marker
-const GeoCoderMarker = ({ address, onPositionChange }) => {
-  const map = useMap();
-  const [position, setPosition] = useState([11.986704390376957, 75.38171598632589]);
-  const [error, setError] = useState(null);
-
-
-
-  return (
-    <Marker position={position} icon={DefaultIcon}>
-      <Popup>{error || 'Marker'}</Popup>
-    </Marker>
-  );
-};
-
 // Main Map component
 const Map = ({ address = '', city = '', country = '' }) => {
-  const [markerPosition, setMarkerPosition] = useState([11.986704390376957, 75.38171598632589]);
 
   return (
-    <MapContainer
-      center={markerPosition}
-      zoom={15} // Adjust zoom level to fit the marker
-      scrollWheelZoom={false}
-      style={{
-        height: '60vh',
-        width: '95%',
-        marginTop: '3rem',
-        zIndex: 0
-      }}
-    >
-      <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
-      <GeoCoderMarker 
-        address={`${address} ${city} ${country}`} 
-        onPositionChange={setMarkerPosition} 
-      />
-    </MapContainer>
+    <div className="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.8283436371803!2d75.37879257357126!3d11.986376835715118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba43e5eaa1932c3%3A0xa686759a5aa8afa5!2sGCE%20KANNUR!5e0!3m2!1sen!2sin!4v1726455931846!5m2!1sen!2sin" width="600" 
+            height="450" 
+            style={{ border: 0 }} 
+            allowFullScreen="" 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   );
 };
 
