@@ -12,7 +12,7 @@ const AboutSection = () => {
   };
   
   return (
-    <section className="flex-grow sm:pt-5 w-full flex flex-col justify-center items-center text-white ">
+    <section className="flex-grow md:h-screen lg:h-screen sm:pt-5 w-full flex flex-col justify-center items-center text-white ">
       <div className="container rounded-md p-10 drop-shadow-lg shadow-lg shadow-blue-500/50 ">
         <div className="container mx-auto text-center">
           <h2 className="text-5xl sm:text-3xl font-bold mb-6 font-handjet">About Xplore 24</h2>

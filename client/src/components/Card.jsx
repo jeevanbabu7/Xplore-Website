@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // import PropTypes from 'prop-types'
 
 // const Card = ({ title, imageSrc, link }) => {
@@ -31,7 +32,7 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
-
+import PropTypes from 'prop-types'
 
 const Card = ({ title, imageSrc, link }) => {
   return (
@@ -78,6 +79,7 @@ const TiltCard = ({title, imageSrc, link}) => {
     y.set(0);
   };
 
+  
   return (
     <motion.div
       ref={ref}
@@ -111,5 +113,12 @@ const TiltCard = ({title, imageSrc, link}) => {
     </motion.div>
   );
 };
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+};
+
 
 export default Card;

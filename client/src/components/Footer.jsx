@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="font-handjet text-white  mb-0 pt-10 pb-8">
           <div className="container mx-auto text-center sm:p-1">
             <ul className="flex flex-wrap justify-center items-start space-x-8">
-              <li className='text-3xl sm:text-sm'>
+              <li className='text-3xl'>
                 <Link to="/competitions" className="hover:underline">
                   Competitions
                 </Link>

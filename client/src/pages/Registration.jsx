@@ -97,7 +97,7 @@ const RegistrationForm = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-8">
-      <div className="bg-white p-10 rounded-lg shadow-2xl w-full max-w-lg">
+      <div className="bg-white p-10 rounded-lg shadow-2xl w-full max-w-lg text-black">
         <h2 className="text-3xl font-semibold text-center mb-8 text-gray-800">Pre-Event Registration</h2>
         <form onSubmit={handleSubmit}>
           {/* Name */}

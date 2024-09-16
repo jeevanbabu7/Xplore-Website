@@ -4,7 +4,6 @@ import ButtonSection from '../components/CardSection';
 import PreEvent from '../components/PreEventSection'
 import About from '../components/AboutSection'
 import Footer from '../components/Footer'
-import Countdown from '../components/Countdown';
 import { useEffect, useState} from 'react';
 import PreLoader from '../utilities/Preloader/PreLoader';
 
@@ -30,7 +29,6 @@ const Home = () => {
     <div className="main-container">
       <HeroSection />
       <QuoteSection />
-      <Countdown targetDate={new Date("2024-10-03") }/>
       <PreEvent />
       <ButtonSection />
       <About />
