@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const Countdown = ({ targetDate }) => {
   const calculateTimeLeft = () => {
@@ -47,7 +47,7 @@ const Countdown = ({ targetDate }) => {
             sec
           </div>
       </div>
-      <p className="font-Pixelify font-light text-2xl font-semibold" >Hurry up and secure your spot!</p>
+      {/* <p className="font-Pixelify font-light text-2xl font-semibold" >Hurry up and secure your spot!</p> */}
     </section>
   );
 };
