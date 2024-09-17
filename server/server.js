@@ -2,6 +2,9 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
+import routes from './routes/authentication.js';
+
+
 // Load environment variables
 dotenv.config();
 
@@ -10,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json()); 
-
+app.use('/', routes);
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log('MongoDB connected'))
