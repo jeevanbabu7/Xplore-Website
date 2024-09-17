@@ -1,8 +1,10 @@
 import express from 'express';  
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
-import routes from './routes/authentication.js';
+import authenticationRoutes from './routes/authentication.js';
+import registrationRoutes from './routes/preEventRegistration.js';
 
 
 // Load environment variables
@@ -13,7 +15,9 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json()); 
-app.use('/', routes);
+app.use(cors()); 
+app.use('/', authenticationRoutes);
+app.use('/', registrationRoutes);
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log('MongoDB connected'))
