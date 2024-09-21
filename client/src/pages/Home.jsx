@@ -15,7 +15,7 @@ const Home = () => {
     const LazyLoading = () => {
       setTimeout(() => {
         setLoading(false);
-      }, 3500);
+      }, 500);
     }
 
     LazyLoading();
@@ -25,7 +25,7 @@ const Home = () => {
     }
   }, []);
 
-  return loading ? (<PreLoader />) : (
+  return (
     <div className="main-container">
       <HeroSection />
       <QuoteSection />
