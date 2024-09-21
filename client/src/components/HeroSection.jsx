@@ -19,9 +19,12 @@
 import { useRef, useEffect } from 'react';
 import ParticleRing from "./ParticleRing"
 
+
 const HeroSection = () => {
   const ref = useRef(null);
   const observer = useRef(null);
+
+  
 
   useEffect(() => {
     observer.current = new IntersectionObserver(entries => {

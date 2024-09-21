@@ -6,11 +6,18 @@ import About from '../components/AboutSection'
 import Footer from '../components/Footer'
 import { useEffect, useState} from 'react';
 import PreLoader from '../utilities/Preloader/PreLoader';
+import AnimatedSection from '../components/AnimatedSection';
 
+import { FadeIn, LeftToRight } from '../utilities/Transitions/FadeTransitions.js';
 
 
 const Home = () => {
+
+  
+
+  // Lazy Loading for Preloader
   const [loading, setLoading] = useState(true);
+  
   useEffect(() => {
     const LazyLoading = () => {
       setTimeout(() => {
@@ -25,10 +32,14 @@ const Home = () => {
     }
   }, []);
 
+
+
   return loading ? (<PreLoader />) : (
-    <div className="main-container">
+    <div className="main-container overflow-hidden">
       <HeroSection />
-      <QuoteSection />
+      <AnimatedSection AnimationStyle={LeftToRight}>
+        <QuoteSection />
+      </AnimatedSection>
       <PreEvent />
       <ButtonSection />
       <About />
