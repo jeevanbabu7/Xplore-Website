@@ -70,6 +70,12 @@ const RegistrationForm = () => {
   
       if (response.ok) {
         // Handle successful registration
+        const res2 = await fetch('http://localhost:3000/export-to-sheets');
+        if(res2.ok){
+          console.log("Data Uploaded to Google Sheets");
+        }else{
+          console.log("Failed!!!,Data NOT Uploaded to Google Sheets");
+        }
         alert('Registration successful!');
         setFormData({
           name: '',
